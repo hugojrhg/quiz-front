@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var nickname = getUrlParameter("nickname");
 
   // Make API call to fetch quiz details
-  fetch(`http://localhost:8080/quiz/${quizId}`)
+  fetch(`https://quiz-back-kihe.onrender.com:8080/quiz/${quizId}`)
     .then(response => {
       if (response.ok) {
         return response.json();
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(player);
         quiz.players.push(player);
         console.log()
-        const apiUrl = `http://localhost:8080/quiz/update/${quiz.id}`; // Replace with your actual API endpoint
+        const apiUrl = `https://quiz-back-kihe.onrender.com:8080/quiz/update/${quiz.id}`; // Replace with your actual API endpoint
     fetch(apiUrl, {
       method: 'PUT',
       headers: {

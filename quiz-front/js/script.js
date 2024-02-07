@@ -3,7 +3,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     
-    const apiUrl = 'http://localhost:8080/user/'+email+'/'+password;
+    const apiUrl = 'https://quiz-back-kihe.onrender.com:8080/user/'+email+'/'+password;
     
     // Example of how to make an API call using fetch
     fetch(apiUrl, {

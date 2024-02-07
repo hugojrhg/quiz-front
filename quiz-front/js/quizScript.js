@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Make API call to submit quiz data
-    const apiUrl = 'http://localhost:8080/quiz/save'; // Replace with your actual API endpoint
+    const apiUrl = 'https://quiz-back-kihe.onrender.com:8080/quiz/save'; // Replace with your actual API endpoint
     fetch(apiUrl, {
       method: 'POST',
       headers: {
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const quizContainer = document.getElementById("quizContainer");
 
   // Make API call to fetch quiz data
-  fetch("http://localhost:8080/quiz")
+  fetch("https://quiz-back-kihe.onrender.com:8080/quiz")
     .then(response => {
       if (response.ok) {
         return response.json();
