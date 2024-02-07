@@ -6,7 +6,7 @@ document.getElementById("registrationForm").addEventListener("submit", function(
     const age = document.getElementById("age").value;
     const password = document.getElementById("password").value;
 
-    const apiUrl = 'https://quiz-back-kihe.onrender.com:8080/user/save';
+    const apiUrl = 'https://quiz-back-kihe.onrender.com/user/save';
 
     fetch(apiUrl, {
     method: 'POST',
