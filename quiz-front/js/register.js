@@ -28,7 +28,6 @@ document.getElementById("registrationForm").addEventListener("submit", function(
   })
   .catch(error => {
     console.error(error);
-    // Display registration failure message
     document.getElementById("registrationMessage").innerText = "Registration failed. Please try again.";
   });
 });

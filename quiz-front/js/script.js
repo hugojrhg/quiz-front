@@ -5,7 +5,6 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     
     const apiUrl = 'https://quiz-back-kihe.onrender.com/user/'+email+'/'+password;
     
-    // Example of how to make an API call using fetch
     fetch(apiUrl, {
       method: 'GET'
     })
@@ -17,12 +16,10 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
       }
     })
     .then(data => {
-      // Handle successful login response here
       console.log(data);
       window.location.href = 'quiz.html';
     })
     .catch(error => {
-      // Handle login failure here
       console.error(error);
       document.getElementById("message").innerText = "Login failed. Please try again.";
     });

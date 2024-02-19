@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Make API call to submit quiz data
-    const apiUrl = 'https://quiz-back-kihe.onrender.com/quiz/save'; // Replace with your actual API endpoint
+    const apiUrl = 'https://quiz-back-kihe.onrender.com/quiz/save';
     fetch(apiUrl, {
       method: 'POST',
       headers: {
@@ -97,12 +97,10 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     })
     .then(data => {
-      console.log(data); // Log API response
-      // Handle successful submission (e.g., display success message)
+      console.log(data);
     })
     .catch(error => {
       console.error(error);
-      // Handle error (e.g., display error message)
     });
   });
 });
@@ -111,7 +109,6 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
   const quizContainer = document.getElementById("quizContainer");
 
-  // Make API call to fetch quiz data
   fetch("https://quiz-back-kihe.onrender.com/quiz")
     .then(response => {
       if (response.ok) {
@@ -168,6 +165,5 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     .catch(error => {
       console.error(error);
-      // Handle error (e.g., display error message)
     });
 });
