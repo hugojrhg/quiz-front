@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function() {
           </tr>
           </thead>`
           quiz.players.forEach(player => {
-            playerCard.innerHTML = playerCard.innerHTML + `
+            playerCard.innerHTML = `` + `
             <tbody>
                 <tr>
                   <td>${player.nickname}</td>
