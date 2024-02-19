@@ -143,7 +143,13 @@ document.addEventListener("DOMContentLoaded", function() {
                   <td>${player.score}</td>
                 </tr>
             </tbody>`
-            
+            playersContainer.appendChild(playerCard);
+            playerCard.innerHTML = `<thead>
+          <tr>
+              <th>Nick</th>
+              <th>Score</th>
+          </tr>
+          </thead>`
           });
         quizCard.addEventListener("click", function() {
           const nicknameModal = document.getElementById("modal");
