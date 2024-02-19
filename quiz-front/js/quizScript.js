@@ -127,9 +127,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <p><strong>Theme:</strong> ${quiz.theme}</p>
           <p><strong>Players Number:</strong> ${quiz.players.length}</p>
         `;
-        
-        quizCard.addEventListener("click", function() {
-          const playersContainer = document.getElementById("playersContainer");
+        const playersContainer = document.getElementById("playersContainer");
           const playerCard = document.createElement("table");
           playerCard.innerHTML = `<thead>
           <tr>
@@ -145,8 +143,11 @@ document.addEventListener("DOMContentLoaded", function() {
                   <td>${player.score}</td>
                 </tr>
             </tbody>`
-            //playersContainer.appendChild(playerCard);
+            playersContainer.appendChild(playerCard);
           });
+        quizCard.addEventListener("click", function() {
+          const playersContainer = document.getElementById("playersContainer");
+          playersContainer.removeChild(playerCard);
 
           const nicknameModal = document.getElementById("modal");
           nicknameModal.style.display = "block";
