@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function() {
                   <td>${player.score}</td>
                 </tr>
             </tbody>`
-            playersContainer.appendChild(playerCard);
+            //playersContainer.appendChild(playerCard);
           });
 
           const nicknameModal = document.getElementById("modal");
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function() {
             nicknameModal.style.display = "none";
           })
         });
-    
+        
         quizContainer.appendChild(quizCard);
       });
     })
