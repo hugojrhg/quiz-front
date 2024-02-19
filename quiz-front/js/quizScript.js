@@ -128,23 +128,25 @@ document.addEventListener("DOMContentLoaded", function() {
           <p><strong>Players Number:</strong> ${quiz.players.length}</p>
         `;
         const playersContainer = document.getElementById("playersContainer");
+        quiz.players.forEach(player => {
           const playerCard = document.createElement("table");
-          playerCard.innerHTML = `<thead>
-          <tr>
-              <th>Nick</th>
-              <th>Score</th>
-          </tr>
-          </thead>`
-          quiz.players.forEach(player => {
-            playerCard.innerHTML = playerCard.innerHTML + `
-            <tbody>
-                <tr>
-                  <td>${player.nickname}</td>
-                  <td>${player.score}</td>
-                </tr>
-            </tbody>`
-            playersContainer.appendChild(playerCard);
-          });
+          playerCard.innerHTML = `
+              <thead>
+                  <tr>
+                      <th>Nick</th>
+                      <th>Score</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>${player.nickname}</td>
+                      <td>${player.score}</td>
+                  </tr>
+              </tbody>
+          `;
+          playersContainer.appendChild(playerCard);
+      });
+      quizCard.appendChild(playersContainer);
         quizCard.addEventListener("click", function() {
           const nicknameModal = document.getElementById("modal");
           nicknameModal.style.display = "block";
