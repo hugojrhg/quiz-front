@@ -135,6 +135,10 @@ document.addEventListener("DOMContentLoaded", function() {
               <th>Score</th>
           </tr>
           </thead>`
+    
+            playersContainer.appendChild(playerCard);
+          });
+        quizCard.addEventListener("click", function() {
           quiz.players.forEach(player => {
             playerCard.innerHTML = playerCard.innerHTML + `
             <tbody>
@@ -143,12 +147,6 @@ document.addEventListener("DOMContentLoaded", function() {
                   <td>${player.score}</td>
                 </tr>
             </tbody>`
-            playersContainer.appendChild(playerCard);
-          });
-        quizCard.addEventListener("click", function() {
-          const playersContainer = document.getElementById("playersContainer");
-          playersContainer.removeChild(playerCard);
-
           const nicknameModal = document.getElementById("modal");
           nicknameModal.style.display = "block";
           const nicknameSubmitButton = document.getElementById("nicknameSubmit");
